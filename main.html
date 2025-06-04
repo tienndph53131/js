@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="addproduct">
+        <input type="text" id="diachi" name="address" placeholder="diachi">
+<button>submit</button>
+    </form>
+    <div class="content">
+        <div class="item1">1</div>
+        <div class="item1">2</div>
+        <div class="item1">3</div>
+        <div class="item1">4</div>
+        <div class="item1">5</div>
+        <div class="item1">6</div>
+        <div class="item1">7</div>
+        <div class="item1">8</div>
+        <span>span1</span><br>
+        <span>span2</span><br>
+        <span>span3</span><br>
+        <span>span4</span><br>
+       <!-- <img class="item" src="anh/Ảnh chụp màn hình 2024-08-09 085631.png" alt=""> -->
+    </div>
+    <!-- <input type="text" name="title">
+    <button onclick="check()">Click me</button> -->
+    <script>
+        // spread va rest
+        // sao chep cac phan tu 
+        // const a=[5,10,2,4]
+        // const b=[...a,5,45]
+        // b.push(9)
+        // console.log(a);
+        // console.log(b);
+        // const person={
+        //     name:"tien",
+        //     age:19
+        // }
+        // const a={...person,age:25}
+        // console.log(a);
+        // rest paramameter
+        // rest: gom lai
+        // function tongs(nha1,nha2,nha3){
+        //     return nha1+nha2+nha3
+        // }
+//         function tongs(...hodan){
+// let tong=0
+// for(dientich of hodan){
+//     tong+=dientich
+// }
+// return tong
+//         }
+//         console.log(tongs(100,23,552));
+        // short circuiting AND va OR||
+        // falsy valure
+        // 1 false
+        // 0
+        // ''""
+        // null
+        // undefined
+        // NaN
+        // bieu thuc AND
+        // const a="tien"&&"qaung"&&"ds"&&"an"
+        // console.log(a);
+// const a=6
+// const b=9
+// const c=10
+// const d= 8
+// const mess=(b>a)&&(c>b)&&(d>c)&&console.log('d la so lon nhat');
+// console.log(mess);
+// bieu thuc or
+// const a=0||"qaung"||false||"an"
+// console.log(a);
+// ung dung 
+// dat gia tri mac dinh
+// function check(){
+
+
+// const title=document.querySelector('input[name="title"]').value
+// const name= null??undefined??"khong xac dinh"
+// console.log(name);}
+//   hoat dong giong bieu thuc OR nhung chi so sanh phan tu voi null va undefined
+// optional chaining
+//  const person={
+//     name:"tien",
+//             age:19
+//  }
+//  const person2={
+//     name:"tien2",
+//             age:191,
+//             address:{
+//             ward:"mks",
+//             provice:"tijen"
+//  }}
+//  const ward=person.address?.ward??"khong xac dinh"
+//  console.log(ward);
+// for of entries
+// const menu=["canh","com","cut"]
+// console.log('danh sach cac mon');
+// let stt=1
+// for(const monan of menu){
+//     console.log('${stt}.${monan}');
+// stt++ 
+// }
+// conts[stt,name]=[0,'canh']
+// for(const[stt,name]of nemu.entries()){
+//     console.log('${stt+1}.${name}');
+// }
+// set
+// khai bao
+// const set= new set()
+// const set= new set([4,5,6])
+// them phan tu
+// set.add
+// xoa 
+// set.delete(4)
+// kiem tra co ton tai k
+// console.log(set.has(66));
+// const banthang=["a","b","a","c","c"]
+// const dscauthu= new Set(banthang)
+// console.log('so cau thu ghi ban');
+// console.log(dscauthu.size);
+// map doi tuong luu tru js=> luu theo cap key value
+// const map =new Map()
+    // mot so p thuc va thuoc tinh
+    // them gia tri ma.st(key,value)
+// map.set("name","ngoc")
+// console.log(map);
+// xoa map.delete
+// map.delete("name")
+// xoa tat ca map.clear()
+// map.clear
+// lay gia tri thong qua key map.get(key)
+// const name =map.get ("name")
+// for (item of map){
+//     console.log(item);
+// }
+// kiem ta key ton tai hay khong map.has(key)=>true of palse
+// console.log(map.has("name"));
+// lay sl theo cac cap key value :map.size
+// console.log(map.size);
+// unng dung
+// let input
+// while(Number(input)!=3){
+//  input = prompt('Viet Nam co bn tinh thanh?1.60 2.61 3.64 4.50')
+// const question =new Map()
+// question.set(1,'ko chinhs xac')
+// question.set(2,'ko chinhs xac')
+// question.set(3,' chinh xac')
+// question.set(4,'ko chinhs xac')
+// alert(question.get(Number(input)))
+// }
+// tham so voi ham (default parameter)
+// function tinhtong(a,b=10){
+//     return a+b
+// }
+// console.log(tinhtong(5))
+// arrow function
+// const tinhtong=(a,b=10)=>a+b
+// console.log(tinhtong(5,5))
+// callback: ham dong vai tro tham so cua ham
+// const display=(a,b,tinhtongfn)=>{
+//     console.log('Tong $(a)+$(b) la ${callbackfn(a,b)}');
+// }
+// display(10,30,tinhtong)
+//vd the tich
+// const dientich= (dai,rong)=>dai*rong
+// const display=(dai,rong,cao)=>{
+//     console.log('the tich: ${dientich(dai,rong)*cao}');
+
+// }
+// display(10,20,5)
+// const display=(dai,rong)=>{
+//     const dientich=dai*rong
+//     return (cao)=>console.log(`Hello, my name is ${dientich*cao} years old.`);
+//     }
+
+// display(10,20,5)
+// goi ham ngay lap tuc IIFE
+// thay vi
+// const tinhtong=(a,b=10)=>console.log(a+b)
+// tinhtong(5,10)
+// thi dun
+// ((a,b=10)=>console.log('tong: ${a+b}'))(5,10)
+// thhao tac voi mang
+// for || for of
+// foreach
+// const a=(10,6,12,8,15)
+// const menu=["com","canh","ca","rau"]
+// console.log('manu');
+// menu.forEach((item,index)=>{
+//     console.log('${index+1}.${item}');
+// })
+// // map<=> spread
+// const a=[10,6,12,8,15]
+// const b=a.map((item,index)=>{
+//     return item+5
+// })
+// console.log(b);
+// filter loc => tao thanh mang theo dk nao do cau mang goc
+// vd lay nhung phan tu chan trong mang a la 6
+// const b=a.filter((item,index)=>{
+//     return item%2==0&&item==6
+// })
+// console.log(b);
+// const b=a.reduce((tong,item,index)=>{
+//     return tong+item
+// },10)
+// console.log(b);
+// neu dung for
+// let tong=0
+// for(item of a){
+//     tong+=item
+// }
+// const b=a.reduce((tong,item,index)=>{
+//     return tong+item
+// },10)
+// console.log(b);
+// // lấy theo class id
+const input =document.getElementById('diachi')
+console.log(diachi);
+// lấy theo class name
+const item =document.getElementsByClassName('item')
+console.log(item);
+// lấy theo 
+const span =document.getElementsByTagName('span')
+console.log(span);
+// lấy theo 
+const address =document.getElementsByName('address')
+console.log(address);
+// lấy theo querySelector
+const input2 =document.querySelector('#diachi')
+console.log(input2);
+// lay theo class
+const item2 =document.querySelectorAll('.item')
+console.log(item2);
+// lay theo tag
+const span2 =document.querySelectorAll('span')
+console.log(span2);
+// lay theo name
+const address2 =document.querySelectorAll('[name=address]')
+console.log(address2);
+// lưu ý querySelector như querySelectorAll nhưng nó chỉ trả về phần tử đầu tiên
+// const image= Document.querySelector('img.item')
+// console.dir(image)
+// image.hidden=true
+// image.src='anh/Ảnh chụp màn hình 2024-08-09 085631.png'
+// const parent= image.parentElement
+// console.dir(parent);
+
+// thay doi nd
+parent.innerHTML='<strong>tien</strong>'
+// tao mot element vao them parent
+
+// tao element
+const newElm = document.createElement('button')
+newElm.innerText= 'them moi'
+// them vao parent
+parent.append(newElm)
+const submibtn=document.querySelector('button')
+console.dir(submibtn);
+submitn.addEventListener('click',()=>{
+    alert('ban vua kick')
+})
+submitn.addEventListener('mouseebter',()=>{
+    console.log('ban vua di chuot vao')
+})
+submitn.addEventListener('mouseleave',()=>{
+    console.log('ban vua di chuot ra')
+})
+
+</script>
+</body>
+</html>
